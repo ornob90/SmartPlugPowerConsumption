@@ -5,11 +5,18 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./layout/Dashboard.jsx";
+import Trend from "./pages/Trend/Trend.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />,
+    children: [
+      {
+        path: "/trend",
+        element: <Trend />,
+      },
+    ],
   },
 ]);
 
